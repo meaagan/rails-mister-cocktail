@@ -14,8 +14,9 @@
   </head>
 
   <body>
-  <%= link_to "home", cocktails_path%>
-        <%# <%= render 'shared/navbar' %> 
+    <%= render 'shared/navbar' %>
+    <div class="content">
       <%= yield %>
+    </div>
   </body>
 </html>
