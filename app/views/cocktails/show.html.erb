@@ -1,6 +1,6 @@
 <h1><%= @cocktail.name %></h1>
 
-<ul>
+<ul class="ingredient-list">
   <% @cocktail.doses.each do |dose| %>
   <li class="list-group-item">
     <%= dose.ingredient.name %>

@@ -1,5 +1,5 @@
 <div class="fixed-top navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
+  <%= link_to cocktails_path, class: "navbar-brand" do %>
     <i class="fas fa-cocktail"></i>
     <% end %>
 
@@ -12,6 +12,9 @@
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
         <%= link_to "Home", cocktails_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item active">
+        <%= link_to "New Cocktail", new_cocktail_path, class: "nav-link" %>
       </li>
     </ul>
   </div>
