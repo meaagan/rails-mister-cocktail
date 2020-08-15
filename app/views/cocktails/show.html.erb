@@ -1,13 +1,16 @@
-<h1><%= @cocktail.name %></h1>
-
-<ul class="ingredient-list">
-  <% @cocktail.doses.each do |dose| %>
-  <li class="list-group-item">
-    <%= dose.ingredient.name %>
-    <%= dose.description %>
-    <%= link_to 'delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %>
-  </li>
-  <% end %>
-</ul>
-
-<%= link_to 'Add new ingredient', new_cocktail_dose_path(@cocktail) %>
+<div class="show">
+  <div style="background-color: purple; padding: 5px;"><h1><%= @cocktail.name %></h1></div>
+  <div class="image-ingredients"  style="display:flex">
+  <img src="https://source.unsplash.com/400x300/?cocktail,drinks" alt="Card image cap">
+  <ul>
+    <% @cocktail.doses.each do |dose| %>
+    <li class="list-group-item">
+      <%= dose.ingredient.name %>
+      <%= dose.description %>
+      <%= link_to 'delete', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %>
+    </li>
+    <% end %>
+  </ul>
+  </div>
+  <%= link_to 'Add new ingredient', new_cocktail_dose_path(@cocktail) %>
+</div>

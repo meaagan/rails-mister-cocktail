@@ -1,3 +1,19 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.content {
+  .show {
+    padding: 25px;
+    margin: 25px;
+    border: 1px solid red;
+    display: flex;
+  }
+}
+
+.show {
+  h1 {
+    background-color: $secondary;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
