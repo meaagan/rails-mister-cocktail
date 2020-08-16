@@ -8,7 +8,12 @@
 <div class="card-container">
   <% @cocktails.each do |cocktail| %>
     <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="https://source.unsplash.com/400x300/?cocktail,drinks" alt="Card image cap">
+    <% if cocktail.photo.attached? %>
+      <% cocktail_img = cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+    <% else %>
+     <%  cocktail_img = "https://source.unsplash.com/200x200/?cocktail,#{cocktail.name}" %>
+    <% end %>
+    <img class="card-img-top" src="<%= cocktail_img %>" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title"><%= cocktail.name %></h5>
         <p class="card-text"></p>
